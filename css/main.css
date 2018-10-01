@@ -1,0 +1,585 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* -------------------- Media Query -------------------- */
+
+@media (max-width: 767px) {  /* Mobil & Tablet */
+    .visible-xs{
+        display: block !important
+    }
+    .hidden-xs{
+        display: none!important
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {  /* Small screen Rules */
+    .container{
+        width: 750px;
+    }
+    .visible-sm{
+        display: block !important
+    }
+    .hidden-sm{
+        display: none!important
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {  /* Medium screen Rules */
+    .container{
+        width: 970px;
+    }
+    .visible-md{
+        display: block !important
+    }
+    .hidden-md{
+        display: none!important
+    }
+}
+@media (min-width: 1200px) {  /* Large screen Rules */
+    .container{
+        width: 1170px;
+    }
+    .visible-lg{
+        display: block !important
+    }
+    .hidden-lg{
+        display: none!important
+    }
+}
+/* -------------------- Media Query -------------------- */
+
+/* -------------------- My Framework ------------------- */
+.container{
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.text-center{text-align: center;}
+.fl-left{float: left}
+.fl-right{float: right}
+.clear{clear: both;}
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg{
+    display: none;
+}
+p{font-size: 17px;
+    line-height: 1.6;
+    color: #666;
+}
+.img-responsive{width: 100%}
+.h2{
+    color: #4cb0d0;
+    padding: 1%;
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+.list-unstyled{margin: 0;padding: 0;list-style: none;}
+/* -------------------- My Framework ------------------- */
+/* -------------------- Start nav ------------------- */
+.nav{
+    background-color: rgba(0,0,0,.8);
+    padding: 1% 0;
+    color: #fff;
+}
+.nav .logo,
+.nav .links{
+    padding: 10px;
+}
+.nav .logo{font-size: 20px;color: #4CB0D0;}
+.nav .links li{
+    display: inline-block;
+}
+.nav .links li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 16px;
+    transition: all .3s ease-in-out;
+}
+.nav .links li a:hover{
+    color: #4CB0D0;
+}
+@media (max-width:767px) {
+    .nav .logo{width: 60%}
+    .nav .toggel{
+        display: block;
+        padding: 5px;
+        background-color: #fff;
+        outline: none;
+        border: none;
+        margin: 7px auto;
+        cursor: pointer;
+    }
+    .nav .links{
+        float: none;
+        display: none;
+        width: 100%;
+    }
+    .nav .links li{
+        width: 100%;
+        padding: 10px;
+    }
+    .nav .links li:hover a{margin-left: 10px;}
+}
+@media (min-width:767px) {
+    .nav .logo{width: 15%}
+    .nav .links{
+        width: 85%;
+        text-align: right;
+    }
+}
+/* -------------------- Start Header ------------------- */
+header{
+    background: url(../images/background.jpg) no-repeat top center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+    color: #fff;
+}
+header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+header .overlay span{color: #71d4f3;font-size: 50px; }
+header .overlay h1{
+    display: inline-block;
+    font-size: 40px;
+    margin: 10% 0 10px;
+    padding: 10px;
+    border-bottom: 2px solid #71d4f3;
+}
+header .overlay p{font-size: 30px;margin-bottom: 3%; color: #fff}
+header .overlay .plan{
+    border: 2px solid #fff;
+    font-size: 28px;
+    width: 48%;
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 1%;
+    margin-right: 1%
+}
+header .overlay button{
+    padding: 15px 50px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #4cb0d0;
+    outline: none;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 5% auto 2%;
+}0
+@media (max-width:767px) {
+    header{min-height: 400px}
+    header .overlay h1 span{font-size: 35px}
+    header .overlay h1{font-size: 25px;}
+    header .overlay p{font-size: 22px;}
+    header .overlay .plan{
+        float: none;
+        margin: 0 auto 20px;
+        font-size: 19px;
+        padding: 10px;
+    }
+    header .overlay button{
+    padding: 10px 25px;
+    font-size: 19px;
+    margin-top: 1%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991) {  /* Small screen Rules */
+    header .overlay button{
+        padding: 10px 25px;
+        font-size: 19px;
+        margin-top: 3%;
+    }
+}
+/* -------------------- Start features ------------------- */
+.features{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #DEDEDF;
+}
+.features .h2{
+    color: #4cb0d0;
+    padding: 1%;
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+.features .par-head{
+    color: #333;
+    font-size: 22px;
+    color: #7A99AD;
+}
+.features p{
+    margin: 0;
+    padding: 1% 0 2%;
+}
+.features .feat{
+    width: 33.333%;
+    padding: 10px;
+}
+.features .feat h3{
+    font-size: 24px;
+    margin: 0;
+    padding: 2%;
+    color: #676767;
+}
+.features .feat h3 img{
+    width: 27px;
+    height: 27px;
+    margin: 0;
+    padding-right: 5px;
+}
+@media (max-width: 767px) {  /* Mobil & Tablet */
+    .features h2{
+        padding: 4% 0 3%;
+        font-size: 30px;
+    }
+    .features p{
+        font-size: 18px;
+    }
+    .features .feat{
+        float: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto 2%;
+        padding: 10px;
+    }
+    .features .feat h3{
+        font-size: 22px;
+    }
+    .features .feat h3 img{
+        width: 20px;
+        height: 20px;
+    }
+    .features .feat p{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+/* -------------------- Start features ------------------- */
+/* -------------------- Start about-us ------------------- */
+.about-us{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    box-shadow: 0px 8px 14px #CCC;
+}
+.about-us .image{width: 36%;margin-right: 4%;padding-top: 20px}
+.about-us .image img{
+    width: 100%;
+    background-color: #fff;
+    padding: 3px;
+    border: 2px solid #DDD;
+}
+.about-us .info{width: 60%;}
+.about-us .info h2{
+    font-size: 30px;
+    color: #4cb0d0;
+    margin: 25px 0 20px 40px;
+}
+.about-us .info > p{
+    margin: 0 0 25px 40px;
+}
+.about-us .info > p:last-of-type{margin-top: 20px;}
+.about-us .info .hobbies{
+    overflow: hidden;
+    margin: 20px 0 0 40px;
+}
+.about-us .info .hobbies h3{margin: 0px;color: #676767;}
+.about-us .info .hobbies .content{
+    width: 50%;
+    min-height: 100px;
+    overflow: hidden;
+}
+.about-us .content .icon{float: left;width: 15%;color: #7A99AD;}
+.about-me .content .icon i{
+    padding-top: 10px;
+}
+.about-us .info .content .text{width: 85%;}
+.about-us .info .content .text p{
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .about-us .info .hobbies .content{
+        float: none;
+        width: 100%;
+        display: block;
+        min-height: 100px;
+    }
+    .about-us .content .icon{width: 10%}
+    .about-us .info .content .text{width: 90%}
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .about-us .image{width: 28%;margin-right: 1%;padding-top: 10px}
+    .about-us .info{width: 70%;}
+    .about-us .info .hobbies .content{
+        float: none;
+        width: 100%;
+        display: block;
+        min-height: 100px;
+    }
+    .about-us .content .icon{width: 10%}
+    .about-us .info .content .text{width: 90%}
+}
+@media (max-width: 767px) {
+    .about-us{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        overflow: hidden;
+    }
+    .about-us .image{display: block;float: none;margin: 1% auto;padding-top: 1% ;width:100%}
+    .about-us .image img{max-width: 400px;text-align: center}
+    .about-us .info{display: block;float: none;margin: 1% auto;width:100%}
+    .about-us .info .hobbies .content{
+        float: none;
+        width: 100%;
+        display: block;
+        min-height: 100px;
+    }
+    .about-us .content .icon{width: 10%}
+    .about-us .info .content .text{width: 90%}
+}
+/* -------------------- End about-us ------------------- */
+/* -------------------- Start projects ------------------- */
+.projects{
+    padding-top: 4%;
+    background-color: #F3F3F3;
+    margin-top: 1%;
+}
+.projects p{
+    color: #7A99AD;
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 3%;
+}
+.projects .image-project
+@media (max-width: 767px) {  /* Mobil & Tablet */
+    .projects .image-project{
+        width: 80%;
+        margin: 0 10% 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {  /* Small screen Rules */
+    .projects .image-project{
+        width: 50%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {  /* Medium screen Rules */
+    .projects .image-project{
+        width: 33.3333%
+    }
+}
+@media (min-width: 1200px) {  /* Large screen Rules */
+    .projects .image-project{
+        width: 25%;
+    }
+}
+/* -------------------- Start pricing-table ------------------- */
+.pricing-table{
+    padding: 4% 0;
+    background-color: #4CB0D0;
+    color: #fff;
+}
+.pricing-table .h2{
+    color: #fff;
+    margin: 0;
+    padding-bottom: 30px;
+}
+.pricing-table .pricing-plan{
+    width: 32%;
+    border: 2px solid #fff;
+    padding: 0;
+    position: relative;
+}
+.pricing-table .pricing-plan h3{
+    margin: 0;
+    background-color: #000;
+    padding: 12px;
+}
+.pricing-table .pricing-plan span{
+    display: block;
+    margin: 0;
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    font-size: 40px;
+}
+.pricing-table .pricing-plan ul{
+    line-height: 2;
+    font-size: 18px;
+}
+.pricing-table .pricing-plan ul li{
+    padding: 6px;
+}
+
+@media (max-width: 767px) {  /* Mobil & Tablet */
+    .pricing-table{
+        padding: 5% 0 0
+    }
+    .pricing-table .pricing-plan{
+        display: inline-block;
+        width: 70%;
+        margin: 0 15% 3%;
+        text-align: center;
+    }
+}
+@media (min-width: 992px) {  /* Medium screen Rules */
+    .pricing-table .pricing-plan:not(.plus){
+        margin-left: 2%;
+    }
+    .pricing-table .pricing-plan.plus{
+        left: 34%;
+    }
+    .pricing-table .pricing-plan.premium{
+        right: 34%
+    }
+}
+/* -------------------- Start they-say ------------------- */
+.they-say{
+    background-image: url(../images/they-say.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4% 0;
+}
+.they-say h2{color: #fff;padding-bottom: 3%}
+.they-say .person-say{
+    padding: 10px;
+    margin: 0 0 3%;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, .3);
+}
+.they-say .person-say h3{
+    margin: 10px 0 10px;
+    color: #4CB0D0;
+    font-size: 25px;
+}
+.they-say .person-image{
+    width: 120px;
+    margin-right: 20px;
+}
+.they-say .person-say p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    width: calc(100% - 140px);
+}
+@media (max-width: 768px) {
+    .they-say .person-say{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (min-width: 768px){
+    .they-say .person-say:first-of-type{
+        width: 100%
+    }
+    .they-say .person-say:not(:first-of-type){
+        width: 49%
+    }
+    .they-say .person-say:nth-of-type(2){
+        margin-right: 2%;
+    }
+   
+}
+@media (min-width: 992px) {
+    .they-say .person-say:first-of-type{
+        width: 80%;
+        margin-left: 10%
+    }
+}
+
+/* -------------------- Start Information ------------------- */
+
+.information{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+.information .h2{
+    margin-bottom: 4%;
+}
+.information .info-list li{
+    display: inline-block;
+    background-color: #DDD;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.information .info-list li.selected{
+    background-color: #fff;
+    color: #4cb0d0;
+}
+.information .info-content > div {
+    background-color: #fff;
+    padding: 10px;
+    line-height: 1.8;
+}
+.information .info-content > div:not(:first-of-type){display: none;}
+.information .info-content p{
+    padding: 30px;
+    color: #555;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .information .info-list li{
+        display: block;
+    }
+}
+/* -------------------- Start footer ------------------- */
+.footer{
+    background-color: #222;
+    color: #fff;
+    padding: 1% 0;
+}
+.footer .copyright,
+.footer .design{
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .footer .copyright,
+    .footer .design{
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .footer .copyright,
+    .footer .design{
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
